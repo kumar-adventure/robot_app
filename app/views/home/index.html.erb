@@ -1,17 +1,50 @@
 <form class="navbar-form navbar-left" role="search">
-  <div class="form-group" style="min-width: 250px;">
-    Starting coordinates :
-  </div>
-  <div class="form-group">
-    <input type="text" name="x_axis" class="form-control" placeholder="X axis value">
-  </div>
-  <div class="form-group">
-    <input type="text" name="y_axis" class="form-control" placeholder="Y axis value">
+	<div>
+	  <div class="form-group" style="min-width: 250px;">
+		Starting coordinates :
+	  </div>
+	  <div class="form-group">
+		<select name="x_coordinate" class="form-control" placeholder="X axis value">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	  </div>
+	  <div class="form-group">
+		<select name="y_coordinate" class="form-control" placeholder="Y axis value">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	  </div>
+	  <div class="form-group">
+		<select name="face" class="form-control" placeholder="Direction">
+			<option value="E">East</option>
+			<option value="W">West</option>
+			<option value="N">North</option>
+			<option value="S">South</option>
+		</select>
+	  </div>
   </div>
   <br/>
-  <br/>
   <div class="form-group" style="min-width: 250px;">
-    Enter new coordinates :
+    Enter Move :
   </div>
   <div class="form-group">
     <input type="text" name="move_to" class="form-control" placeholder="Move to">
@@ -20,6 +53,6 @@
   <br/>
   <br/>
   <div class="form-group" style="width: 100%; text-align: center;">
-    Your new position is :
+    Your new position is : <%= "#{@x}  #{@y}  #{get_direction(@face)}"%>
   </div>
 </form>
